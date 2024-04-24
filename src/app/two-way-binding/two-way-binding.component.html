@@ -1,0 +1,14 @@
+<p>two-way-binding works!</p>
+<div>
+    <input type="text" [(ngModel)]="dataValue" placeholder="Enter text here" 
+    (ngModelChange)="onDataInputChange($event)">
+    <p>The Data Value is : {{dataValue}}</p>
+
+    <input type="number" [(ngModel)]="num" placeholder="Enter number here" 
+    (ngModelChange)="calculateEven()">
+    <p [hidden]="!isEven">Entered number is even</p>
+
+    <input type="number" [(ngModel)]="num" placeholder="Enter number here" 
+    (ngModelChange)="calculateOdd()">
+    <p [hidden]="!isOdd">Entered number is odd</p>
+</div>
